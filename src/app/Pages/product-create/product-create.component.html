@@ -1,0 +1,37 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Product Create</h4>
+                <a routerLink="/products" class="btn btn-danger float-end">Back</a>
+            </div>
+            <div class="card-body">
+                <div *ngIf="isLoading; else elseForm">
+                    <app-loader :title={{loadingTitle}} />
+                </div>
+                <ng-template #elseForm>
+                <form (ngSubmit)="saveProduct()">
+                    <div class="mb-3">
+                        <label>Product Name</label>
+                        <input type="text" [(ngModel)]="product_name" name="product_name" class="form-control">
+                        <span *ngIf="errors.product_name" class="text-danger" >{{errors.product_name}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Product Price</label>
+                        <input type="number" [(ngModel)]="product_price" name="product_price" class="form-control">
+                        <span *ngIf="errors.product_price" class="text-danger" >{{errors.product_price}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Product Category Id</label>
+                        <input type="number" [(ngModel)]="catrgory_id" name="catrgory_id" class="form-control">
+                        <span *ngIf="errors.catrgory_id" class="text-danger" >{{errors.catrgory_id}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
