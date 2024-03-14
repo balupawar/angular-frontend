@@ -29,17 +29,17 @@
                 </table>
             </div>
         </div>
-        <div class="pagination-container">
+        <div class="pagination-container mt-2">
             <button
-              class="pagination-button"
+              class="pagination-button btn btn-warning text-white"
               (click)="prevPage()"
               [disabled]="currentPage == 1"
             >
               Previous
             </button>
-            <span class="pagination-info">{{ currentPage }} / {{ totalPages }}</span>
+            <span class="pagination-info text-dark">{{ currentPage }} / {{ totalPages }}</span>
             <button
-              class="pagination-button"
+              class="pagination-button btn btn-warning text-white"
               (click)="nextPage()"
               [disabled]="currentPage == totalPages"
             >
