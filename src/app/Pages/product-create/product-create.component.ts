@@ -19,7 +19,7 @@ export class ProductCreateComponent {
 
   product_name!: string
   product_price!: number
-  catrgory_id!: number
+  catrgory_id!: any
 
   isLoading: boolean = false;
   loadingTitle: string = 'Loading'
@@ -39,10 +39,12 @@ export class ProductCreateComponent {
         
         console.log(res, "response")
         this.isLoading = false;
-        alert(res.message);
+        if(res.affectedRows >= 1){
+        alert("save product successfully");
+      }
         this.product_name = '';
         this.product_price = 0;
-        this.catrgory_id = 0;
+        this.catrgory_id= '';
       },
       error: (err: any)=>{
         this.errors = err.error.errors;

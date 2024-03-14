@@ -14,7 +14,7 @@ export class ProductPageComponent implements OnInit {
   error: any;
   currentPage: number = 1;
   totalPages: number = 0;
-  totalProducts: number = 0;
+  // totalProducts: number = 0;
   limit: number = 10;
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class ProductPageComponent implements OnInit {
         const startIndex = (this.currentPage-1)*this.limit
         const endIndex = this.currentPage*this.limit
         this.products = products.slice(startIndex,endIndex);
-        this.totalProducts = total;
+        // this.totalProducts = total;
         this.totalPages = Math.ceil(total / this.limit);
         console.log()
         console.log(products);
