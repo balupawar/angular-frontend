@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './Product';
+import { ProductDetails } from './ProductDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,19 @@ export class ProductService {
   ): Promise<{ products: Product[]; total: number }> {
     const data = await fetch(
       `${this.apiUrl}products?page=${page}&pageSize=${pageSize}`
+    );
+    const response = await data.json();
+    console.log(response);
+
+    return response;
+  }
+
+  async getProductDetailsByLimit(
+    page: number = 1,
+    pageSize: number = 10
+  ): Promise<{productsdetails: ProductDetails[]; total: number}>{
+    const data = await fetch(
+      `${this.apiUrl}productsdetails?page=${page}&pageSize=${pageSize}`
     );
     const response = await data.json();
     console.log(response);
