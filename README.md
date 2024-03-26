@@ -10,6 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ![image](https://github.com/balupawar/angular-frontend/assets/57836867/797e471d-1798-4d8c-87f0-7ac66824e35e)
 ![image](https://github.com/balupawar/angular-frontend/assets/57836867/1d1d8f4f-3f22-4ac4-bb9f-f29135679455)
 ![image](https://github.com/balupawar/angular-frontend/assets/57836867/671f7b97-7983-4143-92b6-d165fd45797c)
+![image](https://github.com/balupawar/angular-frontend/assets/57836867/beb787e7-3950-4fa8-ab06-221fec414ddc)
 
 
 
